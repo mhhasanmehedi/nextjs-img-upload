@@ -4,6 +4,7 @@ import { writeFile } from "fs/promises";
 import { join } from "path";
 import uniqid from "uniqid";
 
+// Post Request
 export const POST = async (req) => {
   try {
     const data = await req.formData();
@@ -38,6 +39,7 @@ export const POST = async (req) => {
   }
 };
 
+// Get Request
 export const GET = async () => {
   try {
     const gallery = await prisma.gallery.findMany();
